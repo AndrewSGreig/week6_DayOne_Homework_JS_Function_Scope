@@ -142,16 +142,16 @@
 // // }
 // //
 // // const declareMurderer = function() {
-// //   return `The murderer is ${murderer}.`;
+// //  return `The murderer is ${murderer}.`;
 // // }
 // //
 // // changeMurderer();
 // // const verdict = declareMurderer();
 // // console.log(verdict);
 // // // ExpectedOutcome:
-// // //The murderer is Miss Scarlet
-// // //
-// // // step through: steps into plotTwist and updates the murderer, then steps into unexpectedOutcome and again updates, yet the verdict is the original value
+// // //The murderer is Miss Mr Green
+//
+// step through: steps into plotTwist and updates the murderer, then steps into unexpectedOutcome and again updates, yet the verdict is the original value becuase the changeMurderer and plotTwist are block scoped (CONST)
 //
 //
 // // Episode 8
@@ -191,8 +191,8 @@
 // console.log(verdict);
 // //Expected outcome
 // //the weapon is Candle Stick
-//
-//
+
+
 
 
 // Episode 9
@@ -212,4 +212,5 @@ const declareMurderer = function() {
 const verdict = declareMurderer();
 console.log(verdict);
 //Expected outcome
-// The murderer is Mrs. Peacock
+// The murderer is Professor Plum
+//because it's block scoped (LET) then the setting of murderer to mrs peacock is cleared unset outside the if
